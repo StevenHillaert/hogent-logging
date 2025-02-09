@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "LogItLikeItsHot.Customers\\LogItLikeItsHot.Customers.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "LogItLikeItsHot.Barista\\LogItLikeItsHot.Barista.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
