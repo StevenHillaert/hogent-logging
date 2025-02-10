@@ -12,8 +12,15 @@ namespace LogItLikeItsHot.Shared.Logging
             var loggerConfig = new LoggerConfiguration()
                 .Destructure.UsingAttributes()
                 .Enrich.FromLogContext()
-                .WriteTo.Console();
+                .WriteTo.Console()
             // todo : 1c. add seq sink
+                .WriteTo.Seq("http://localhost:5341", apiKey: seqApiKey);
+
+            // todo : 2d. add enrichers
+            // log appName as a property 'Application'
+            // log the machine name
+            // log the user name that the application is running under
+
 
             Log.Logger = loggerConfig.CreateLogger();
 

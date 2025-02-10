@@ -20,6 +20,10 @@ namespace LogItLikeItsHot.Barista
                 cfg.RegisterServicesFromAssembly(typeof(GetMenuHandler).Assembly);
             });
 
+            // todo : 2a. integrate Serilog with .NET
+
+            // todo : 2c. register the Mediatr behavior
+
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())

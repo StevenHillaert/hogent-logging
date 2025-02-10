@@ -58,6 +58,7 @@ namespace LogItLikeItsHot.Customers
                 #endregion
 
                 // todo : 1a. log customer, amount of coffees and total amount of the order...
+                Log.Information("{customer} ordered {count} coffees for a total of {total}EUR", orderResponse.Customer, orderResponse.TotalCoffees, orderResponse.Total);
 
             }
         }
