@@ -1,6 +1,7 @@
 using LogItLikeItsHot.Barista.Features;
 using LogItLikeItsHot.Shared.Logging;
 using MediatR;
+using Serilog;
 
 namespace LogItLikeItsHot.Barista
 {
@@ -8,6 +9,8 @@ namespace LogItLikeItsHot.Barista
     {
         public static void Main(string[] args)
         {
+            LoggerBuilder.BuildLogger("yMblo58lvf2SWwxAamYJ", "Barista api");
+
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -16,10 +19,6 @@ namespace LogItLikeItsHot.Barista
             {
                 cfg.RegisterServicesFromAssembly(typeof(GetMenuHandler).Assembly);
             });
-
-
-            LoggerBuilder.BuildLogger("yMblo58lvf2SWwxAamYJ", "Barista api");
-
 
             var app = builder.Build();
 
