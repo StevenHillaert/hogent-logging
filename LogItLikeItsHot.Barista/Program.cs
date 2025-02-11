@@ -29,7 +29,9 @@ namespace LogItLikeItsHot.Barista
             builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
 
             // todo: 4b. tracing setup api, tip: you need an activity listener to instrument the AspNetCoreRequests
-
+            using var _ = new ActivityListenerConfiguration()
+                .Instrument.AspNetCoreRequests()
+                .TraceToSharedLogger();
 
             var app = builder.Build();
 

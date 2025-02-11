@@ -16,6 +16,9 @@ namespace LogItLikeItsHot.Customers
             LoggerBuilder.BuildLogger("1bJXLdO4yIMfIP9Kx5Q3", "customer app");
 
             // todo: 4a. tracing setup customer, tip: you need an activity listener to instrument the HttpClient
+            using var _ = new ActivityListenerConfiguration()
+                .Instrument.HttpClientRequests()
+                .TraceToSharedLogger();
 
 
             Console.WriteLine("Coffee shop, log a cup, is open for business");
@@ -37,6 +40,8 @@ namespace LogItLikeItsHot.Customers
         {
             while (true)
             {
+                using var enteringActivity = Log.Logger.StartActivity("{Customer} entering", customer);
+
                 #region ordering coffee
                 // wait for a random time
                 await Task.Delay(new Random().Next(100, 1000));

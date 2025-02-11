@@ -2,6 +2,7 @@ using MediatR;
 using Serilog.Context;
 using Serilog.Events;
 using Serilog;
+using SerilogTracing;
 
 namespace LogItLikeItsHot.Barista.Mediatr
 {
@@ -16,7 +17,7 @@ namespace LogItLikeItsHot.Barista.Mediatr
             TResponse response;
 
             // todo: 4c. tracing pipeline, tip: use the Serilog to start an activity
-
+            using var activity = Log.Logger.StartActivity("Handling {RequestType}", requestType);
 
             using (LogContext.PushProperty("RequestType", requestType))
             using (LogContext.PushProperty("Request", request, true))
