@@ -13,7 +13,7 @@ namespace LogItLikeItsHot.Barista.Features
             var total = CalculateTotal(request);
 
             // todo : 1b. log command information...
-            Log.Information("Order placed: {@OrderCommand}", request);
+            //Log.Information("Order placed: {@OrderCommand}", request);
 
             return new PlaceOrderResponse()
             {

@@ -1,7 +1,9 @@
 using LogItLikeItsHot.Barista.Features;
+using LogItLikeItsHot.Barista.Mediatr;
 using LogItLikeItsHot.Shared.Logging;
 using MediatR;
 using Serilog;
+using SerilogTracing;
 
 namespace LogItLikeItsHot.Barista
 {
@@ -21,8 +23,13 @@ namespace LogItLikeItsHot.Barista
             });
 
             // todo : 2a. integrate Serilog with .NET
+            builder.Host.UseSerilog();
 
             // todo : 2c. register the Mediatr behavior
+            builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
+
+            // todo: 4b. tracing setup api, tip: you need an activity listener to instrument the AspNetCoreRequests
+
 
             var app = builder.Build();
 

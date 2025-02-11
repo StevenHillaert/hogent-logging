@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SerilogTracing" Version="2.3.1" />
+    <PackageReference Include="SerilogTracing.Expressions" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LogItLikeItsHot.Shared\LogItLikeItsHot.Shared.csproj" />
   </ItemGroup>
 

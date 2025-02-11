@@ -2,6 +2,7 @@ using LogItLikeItsHot.Shared.Features;
 using LogItLikeItsHot.Shared.Logging;
 using Serilog;
 using Serilog.Core;
+using SerilogTracing;
 using System.Net.Http.Json;
 
 namespace LogItLikeItsHot.Customers
@@ -13,6 +14,9 @@ namespace LogItLikeItsHot.Customers
         static async Task Main(string[] args)
         {
             LoggerBuilder.BuildLogger("1bJXLdO4yIMfIP9Kx5Q3", "customer app");
+
+            // todo: 4a. tracing setup customer, tip: you need an activity listener to instrument the HttpClient
+
 
             Console.WriteLine("Coffee shop, log a cup, is open for business");
             Console.WriteLine("=====================================================");
