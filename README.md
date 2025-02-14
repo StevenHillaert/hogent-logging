@@ -4,7 +4,7 @@ This repository was originally created for a workshop at HoGent on logging best 
 
 The workshop consists of 3 parts where participants work through several exercises to evolve an application without any logging into an application that includes different best practices to automate logging as much as possible.
 
-Each part has its own branch to start from (part1, part2, part3). Each branch has a set of todo's, visible in the task pane of Visual Studio, and also includes a solution for the todo's of the previous step. There's also a "complete" branch with the last set of solutions and also includes the PowerPoint presentation that includes some slides used in the workshop as well as the slides from my talk "Log it like it's hot" that I've given at several conferences.
+Each part has its own branch to start from ([part1](https://github.com/StevenHillaert/hogent-logging/tree/part1), [part2](https://github.com/StevenHillaert/hogent-logging/tree/part2), [part3](https://github.com/StevenHillaert/hogent-logging/tree/part3)). Each branch has a set of todo's, visible in the task pane of Visual Studio, and also includes a solution for the todo's of the previous step. There's also a "[complete](https://github.com/StevenHillaert/hogent-logging/tree/complete)" branch with the last set of solutions and also includes the PowerPoint [presentation](https://github.com/StevenHillaert/hogent-logging/blob/complete/HoGent%20Workshop%20-%20Log%20it%20like%20it's%20hot.pptx) that includes some slides used in the workshop as well as the slides from my talk "Log it like it's hot" that I've given at several conferences.
 
 # getting started
 
